@@ -70,7 +70,33 @@
 
 
 ## ✔️ 1~5 까지 데이터를 어떻게 합쳐야할까?
-  👉🏻
+  👉🏻 데이터파일 - 컬럼명
+  items-item_id, item_categories-item_category_id, sample_submission-ID, shops-shop_id 
+  다른 컬럼들과 다르게 번호대로 쭉 나열 되는거 보면, 이런 컬럼들은 drop 해도 될거 같다.
+  
+  👉🏻 autoML돌리기 위해 인터넷에 있는 데이터 합치기를 참고했음.
 
+  
 ## ✔️ 사용할 모델
-  👉🏻
+  👉🏻 `pycaret.regression` 회귀분석 예측을 선택
+   target - 'item_cnt_day' 
+   <br>
+          * 월별 금액 <br>
+          * 총 판매금액 
+
+  👉🏻 회귀모델의 성능 평가 지표 <br>
+    * MAE(Mean Absolute Error) : 모델의 예측값과 실제값의 차이의 절대값의 평균 <br>
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    절대값을 취하기 때문에 가장 직관적으로 알 수 있는 지표
+  
+   * MSE(Mean Squared Error) : 제곱을 하기 때문에 특이치(Outlier)에 민감
+   * RMSE(Root Mean Squared Error) : 일반적으로 많이 쓰이는 회귀모델 성능분석지표(MAE와 함께)
+   * R2 : 값이 1에 가까울 수록 성능이 좋음
+   * RMSLE : 상대적 error 측정, 
+   * MAPE(Mean Absolute Percentage Error) = 평균 절대 비율 오차 : 직관적, 에러율 비교 쉬움
+
+<hr/>
+
+     **0에 가까울 수록 좋은 성능 : MSE, MAE, RMSE, RMSLE**
+     <br>
+     **1에 가까울 수록 좋은 성능 : R2**
