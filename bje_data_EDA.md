@@ -54,7 +54,25 @@
  ### 6개 테이블 정리
  - Null 값 존재하지 않음
  - 많은 양의 데이터, 월별로 요약할 필요
- - 월별 매출액 계산 필드 필요 
+ - 월별 매출액 계산 필드 필요
+
+## 데이터 양상 시각화 코드
+1. 월별 총 상품 판매량 막대그래프
+
+![image](https://github.com/eeoooo/mini_project/assets/133926006/3a7b049e-088d-49a1-97a7-84cd77731e19)
+
+2. 상품 카테고리별 총 상품 판매량 막대그래프
+
+![image](https://github.com/eeoooo/mini_project/assets/133926006/5202d73f-1114-49d8-985b-1e4cfc0db42b)
+
+3. 가게별 총 상품 판매량 막대그래프
+
+![image](https://github.com/eeoooo/mini_project/assets/133926006/dae24ce5-2905-482a-bc0c-a7766dce5177)
+
+견해: 추세가 보이는건 월별 총 상품 판매량 막대그래프
+
+## 데이터 전처리
+
 
 ## 어떤 판매량 예측?
 #### 1. 월별 총 판매 금액 예측
@@ -71,7 +89,7 @@
 
 #### 5. 계절별 판매 매출
 
-### 월별 총 판매 금액 예측을 하는게 어떨까..?
+#### 월별 총 판매 금액 예측을 하는게 어떨까..?
 
 
 ## 어떤 알고리을 사용하여 예측?
@@ -81,19 +99,29 @@
 #### 2. 랜덤 포레스트(Random Forest)
 
 #### 3. XGBOOST
+- |제목|내용|설명|
+|------|---|---|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
+|테스트1|테스트2|테스트3|
 
 #### 4. LightGBM
-	[LightGBM] [Info] Start training from score 0.299125
-	[50]	training's rmse: 1.14777	valid_1's rmse: 1.06755
-	[100]	training's rmse: 1.11425	valid_1's rmse: 1.0386
-	[150]	training's rmse: 1.09673	valid_1's rmse: 1.02671
-	[200]	training's rmse: 1.08573	valid_1's rmse: 1.02027
-	[250]	training's rmse: 1.07722	valid_1's rmse: 1.01661
-	[300]	training's rmse: 1.0698	valid_1's rmse: 1.0138
-	[350]	training's rmse: 1.06317	valid_1's rmse: 1.01084
-	[400]	training's rmse: 1.05734	valid_1's rmse: 1.00936
-	[450]	training's rmse: 1.05224	valid_1's rmse: 1.00818
-	[500]	training's rmse: 1.04792	valid_1's rmse: 1.00722
+- Leaf-wise를 사용하면 훨씬 더 빠르게 optimal을 찾을 수 있음
+- 길이가 너무 커지면 overfitting될 가능성이 높아  Level을 제한하여 최대한 모델 키우기
+- 월별 패턴 파악: tree based로 예측이 용이할 것으로 보임
+- 
+	| [LightGBM] | [Info] | Start training from score 0.299125 |
+  	[50]	training's rmse: 1.14777	valid_1's rmse: 1.06755
+  	[100]	training's rmse: 1.11425	valid_1's rmse: 1.0386
+  	[150]	training's rmse: 1.09673	valid_1's rmse: 1.02671
+  	[200]	training's rmse: 1.08573	valid_1's rmse: 1.02027
+  	[250]	training's rmse: 1.07722	valid_1's rmse: 1.01661
+  	[300]	training's rmse: 1.0698		valid_1's rmse: 1.0138
+  	[350]	training's rmse: 1.06317	valid_1's rmse: 1.01084
+  	[400]	training's rmse: 1.05734	valid_1's rmse: 1.00936
+  	[450]	training's rmse: 1.05224	valid_1's rmse: 1.00818
+  	[500]	training's rmse: 1.04792	valid_1's rmse: 1.00722
 
 
 #### 5. CatBOOST
+ - 최근 가장 많이 사용되는 알고리즘 중 하나
