@@ -51,6 +51,11 @@
  	0   ID              214200 non-null  int64   : 승인 ID
  	1   item_cnt_month  214200 non-null  float64 : 상품 
 
+ ### 6개 테이블 정리
+ - Null 값 존재하지 않음
+ - 많은 양의 데이터, 월별로 요약할 필요
+ - 월별 매출액 계산 필드 필요 
+
 ## 어떤 판매량 예측?
 #### 1. 월별 총 판매 금액 예측
 - 월 ID / 가게 ID / 상품 ID / 상품 금액 / 총 판매 수량 / 총 판매 금액
@@ -66,6 +71,8 @@
 
 #### 5. 계절별 판매 매
 
+#### 월별 총 판매 금액 예측
+
 
 ## 어떤 알고리을 사용하여 예측?
 
@@ -76,5 +83,17 @@
 #### 3. XGBOOST
 
 #### 4. LightGBM
+	[LightGBM] [Info] Start training from score 0.299125
+	[50]	training's rmse: 1.14777	valid_1's rmse: 1.06755
+	[100]	training's rmse: 1.11425	valid_1's rmse: 1.0386
+	[150]	training's rmse: 1.09673	valid_1's rmse: 1.02671
+	[200]	training's rmse: 1.08573	valid_1's rmse: 1.02027
+	[250]	training's rmse: 1.07722	valid_1's rmse: 1.01661
+	[300]	training's rmse: 1.0698	valid_1's rmse: 1.0138
+	[350]	training's rmse: 1.06317	valid_1's rmse: 1.01084
+	[400]	training's rmse: 1.05734	valid_1's rmse: 1.00936
+	[450]	training's rmse: 1.05224	valid_1's rmse: 1.00818
+	[500]	training's rmse: 1.04792	valid_1's rmse: 1.00722
+
 
 #### 5. CatBOOST
