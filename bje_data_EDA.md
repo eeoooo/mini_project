@@ -57,15 +57,15 @@
  - 월별 매출액 계산 필드 필요
 
 ## 데이터 양상 시각화 코드
-1. 월별 총 상품 판매량 막대그래프
+#### 1. 월별 총 상품 판매량 막대그래프
 
 ![image](https://github.com/eeoooo/mini_project/assets/133926006/3a7b049e-088d-49a1-97a7-84cd77731e19)
 
-2. 상품 카테고리별 총 상품 판매량 막대그래프
+#### 2. 상품 카테고리별 총 상품 판매량 막대그래프
 
 ![image](https://github.com/eeoooo/mini_project/assets/133926006/5202d73f-1114-49d8-985b-1e4cfc0db42b)
 
-3. 가게별 총 상품 판매량 막대그래프
+#### 3. 가게별 총 상품 판매량 막대그래프
 
 ![image](https://github.com/eeoooo/mini_project/assets/133926006/dae24ce5-2905-482a-bc0c-a7766dce5177)
 
