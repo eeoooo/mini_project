@@ -33,7 +33,7 @@
 |----|---|---|
 |item_category_name|object|상품 분류 이름 -> 분류모델|
 |item_category_id|int|위 items에 item_category_id와 같음| <br>
--> 이 파일은 삭제 (items와 동일)
+-> 이 파일은 items merge 하면 어떤지 (items와 동일)
 
 
 ### 4. shops <br>
@@ -42,6 +42,8 @@
 |----|---|---|
 |shop_name|object|가게이름|
 |shop_id|int|가게 이름 -> 분류|
+<br>
+-> sales_train 컬럼에 shop_id 있으므로 사용 X
 
 
 
